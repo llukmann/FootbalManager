@@ -1,0 +1,19 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="lukman" id="06.create-table-clubs">
+        <createTable tableName="clubs">
+            <column name="club_id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="club_name" type="varchar(32)"/>
+            <column name="short_club_name" type="varchar(3)"/>
+            <column name="league_id" type="bigint"/>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="clubs"
+                                 baseColumnNames="league_id"
+                                 constraintName="fk_club_league"
+                                 referencedTableName="leagues"
+                                 referencedColumnNames="league_id"/>
+    </changeSet>
+</databaseChangeLog>

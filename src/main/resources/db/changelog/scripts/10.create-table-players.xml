@@ -1,0 +1,32 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="lukman" id="10.create-table-players">
+        <createTable tableName="players">
+            <column name="player_id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="firstname" type="varchar(32)"/>
+            <column name="lastname" type="varchar(32)"/>
+            <column name="position_id" type="int"/>
+            <column name="club_id" type="bigint"/>
+            <column name="country_id" type="bigint"/>
+            <column name="overall_rating" type="int"/>
+        </createTable>
+        <addForeignKeyConstraint baseTableName="players"
+                                 baseColumnNames="position_id"
+                                 constraintName="fk_player_position"
+                                 referencedTableName="positions"
+                                 referencedColumnNames="position_id"/>
+        <addForeignKeyConstraint baseTableName="players"
+                                 baseColumnNames="club_id"
+                                 constraintName="fk_player_club"
+                                 referencedTableName="clubs"
+                                 referencedColumnNames="club_id"/>
+        <addForeignKeyConstraint baseTableName="players"
+                                 baseColumnNames="country_id"
+                                 constraintName="fk_player_country"
+                                 referencedTableName="countries"
+                                 referencedColumnNames="country_id"/>
+    </changeSet>
+</databaseChangeLog>

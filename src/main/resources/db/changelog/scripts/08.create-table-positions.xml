@@ -1,0 +1,13 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="lukman" id="08.create-table-positions">
+        <createTable tableName="positions">
+            <column name="position_id" type="int" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="position_name" type="varchar(32)"/>
+            <column name="short_position_name" type="varchar(3)"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

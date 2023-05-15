@@ -1,0 +1,22 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="lukman" id="04.insert-into-countries">
+        <insert tableName="positions">
+            <column name="position_name" value="Goalkeeper"/>
+            <column name="short_position_name" value="GK"/>
+        </insert>
+        <insert tableName="positions">
+            <column name="position_name" value="Defender"/>
+            <column name="short_position_name" value="DEF"/>
+        </insert>
+        <insert tableName="positions">
+            <column name="position_name" value="Midfielder"/>
+            <column name="short_position_name" value="MID"/>
+        </insert>
+        <insert tableName="positions">
+            <column name="position_name" value="Forward"/>
+            <column name="short_position_name" value="FWD"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

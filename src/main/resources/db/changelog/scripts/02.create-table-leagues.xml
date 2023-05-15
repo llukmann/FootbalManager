@@ -1,0 +1,14 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="lukman" id="02.create-table-leagues">
+        <createTable tableName="leagues">
+            <column name="league_id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="league_name" type="varchar(32)"/>
+            <column name="country_id" type="bigint"/>
+            <column name="league_tier" type="int"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

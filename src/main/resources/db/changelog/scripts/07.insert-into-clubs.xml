@@ -1,0 +1,82 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <changeSet author="lukman" id="04.insert-to-countries">
+        <insert tableName="clubs">
+            <column name="club_name" value="Manchester United"/>
+            <column name="short_club_name" value="MUN"/>
+            <column name="league_id" value="1"/>
+        </insert>
+        <insert tableName="clubs">
+            <column name="club_name" value="Manchester City"/>
+            <column name="short_club_name" value="MCI"/>
+            <column name="league_id" value="1"/>
+        </insert>
+        <insert tableName="clubs">
+            <column name="club_name" value="Arsenal"/>
+            <column name="short_club_name" value="ARS"/>
+            <column name="league_id" value="1"/>
+        </insert>
+        <insert tableName="clubs">
+            <column name="club_name" value="Liverpool"/>
+            <column name="short_club_name" value="LIV"/>
+            <column name="league_id" value="1"/>
+        </insert>
+        <insert tableName="clubs">
+            <column name="club_name" value="Real Madrid"/>
+            <column name="short_club_name" value="RMA"/>
+            <column name="league_id" value="2"/>
+        </insert>
+        <insert tableName="clubs">
+            <column name="club_name" value="Barcelona"/>
+            <column name="short_club_name" value="BAR"/>
+            <column name="league_id" value="2"/>
+        </insert>
+        <insert tableName="clubs">
+            <column name="club_name" value="Athletico Madrid"/>
+            <column name="short_club_name" value="ATM"/>
+            <column name="league_id" value="2"/>
+        </insert>
+        <insert tableName="clubs">
+            <column name="club_name" value="Bayern Munich"/>
+            <column name="short_club_name" value="BAY"/>
+            <column name="league_id" value="3"/>
+        </insert>
+        <insert tableName="clubs">
+            <column name="club_name" value="Borussia Dortmund"/>
+            <column name="short_club_name" value="BOR"/>
+            <column name="league_id" value="3"/>
+        </insert>
+        <insert tableName="clubs">
+            <column name="club_name" value="AC Milan"/>
+            <column name="short_club_name" value="ACM"/>
+            <column name="league_id" value="4"/>
+        </insert>
+        <insert tableName="clubs">
+            <column name="club_name" value="Internazionale"/>
+            <column name="short_club_name" value="INT"/>
+            <column name="league_id" value="4"/>
+        </insert>
+        <insert tableName="clubs">
+            <column name="club_name" value="Juventus"/>
+            <column name="short_club_name" value="JUV"/>
+            <column name="league_id" value="4"/>
+        </insert>
+        <insert tableName="clubs">
+            <column name="club_name" value="Napoli"/>
+            <column name="short_club_name" value="NAP"/>
+            <column name="league_id" value="4"/>
+        </insert>
+        <insert tableName="clubs">
+            <column name="club_name" value="Paris Saint German"/>
+            <column name="short_club_name" value="PSG"/>
+            <column name="league_id" value="5"/>
+        </insert>
+        <insert tableName="clubs">
+            <column name="club_name" value="Olympic Lyon"/>
+            <column name="short_club_name" value="OL"/>
+            <column name="league_id" value="5"/>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>
